@@ -13,6 +13,11 @@ export default function LoginScreen({ navigation }) {
         navigation.navigate('Registration')
     }
 
+
+    const onForgotPasswordLinkPress = () => {
+
+    }
+
     const onLoginPress = () => {
         firebase
             .auth()
@@ -78,6 +83,10 @@ export default function LoginScreen({ navigation }) {
                 </TouchableOpacity>
                 <View style={styles.footerView}>
                     <Text style={styles.footerText}>Don't have an account? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Sign up</Text></Text>
+                </View>
+
+                <View style={styles.footerView}>
+                  <Text onPress={onForgotPasswordLinkPress} style={styles.footerLink}>Forgot Password?</Text>
                 </View>
             </KeyboardAwareScrollView>
         </View>
